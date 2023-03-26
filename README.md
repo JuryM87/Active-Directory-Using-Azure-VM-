@@ -31,8 +31,11 @@ Software built and maintained by Microsoft. Centrally manages thousands of user 
 
 <h2>Setup Resources in Azure</h2>
 
+
 1. Create the Domain Controller VM (Windows Server 2022) named “DC-1"
    Take note of the Resource Group and Virtual Network (Vnet) that get created at this time
+   
+   
 2. Set Domain Controller’s NIC Private IP address to be static
 DC-1 > Networking > NIC > IP Configurations
 
@@ -40,7 +43,6 @@ DC-1 > Networking > NIC > IP Configurations
 
 3. Create the Client VM (Windows 10) named “Client-1”. Use the same Resource Group and Vnet that was created in the DC-1 step.
 4. Ensure that both VMs are in the same Vnet [you can check the topology with Network Watcher]
-Here is an illustration of what we are doing: 
 
 ![vivaldi_z3kENJuYuV](https://i.imgur.com/iJfYltq.png)
 
@@ -78,17 +80,27 @@ Yay!!! Look at the traffic.
 
 
 1. Login to DC-1 and install Active Directory Domain Services
+   
 
 - Server Manager > "Add Roles and Features" > Check "Active Directory Domain Services"
+ 
 
 ![vivaldi_od5BgUKG6G](https://i.imgur.com/fwJPzlR.png)
+   
 
-2. Promote as a DC: Setup a new forest as mydomain.com (can be anything, just remember what it is)
+2. Promote as a DC: Setup a new forest as jury.com (can be anything, just remember what it is)
 
-![2023-01-18 09 37 20 coursecareers com a3928ff24e0f](https://user-images.githubusercontent.com/109401839/213215535-f43842d0-f1ab-4c6a-91d1-18d8a9bdff06.jpg)
+![2023-01-18 09 37 20 coursecareers com a3928ff24e0f](https://i.imgur.com/fwcvIzY.png)
 
 ![2023-01-18 09 38 10 coursecareers com 78e39ae4181d](https://user-images.githubusercontent.com/109401839/213215738-c6379380-e5b8-438b-95a8-6906a16ff339.jpg)
 
-3. Restart and then log back into DC-1 as user: mydomain.com\labuser
+3. Restart and then log back into DC-1 as user: jury.com\labuser
+   
+4. Search Active Directory User and Computers (ADUC), and creat an Organizational Unit (OU) called "_EMPLOYEES"
+   
+   ![vivaldi_od5BgUKG6G](https://i.imgur.com/RhF5cJm.png)
+   
+   Create an new OU named "_ADMINS"
+   
+   ![vivaldi_od5BgUKG6G!](https://i.imgur.com/p3wByA9.png)
 
-![vivaldi_xJc36FTsPS](https://user-images.githubusercontent.com/109401839/213216324-dccbe8d1-3791-4eea-8609-6643d27f1bc9.png)
