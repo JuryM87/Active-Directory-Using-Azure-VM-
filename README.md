@@ -42,7 +42,7 @@ DC-1 > Networking > NIC > IP Configurations
 4. Ensure that both VMs are in the same Vnet [you can check the topology with Network Watcher]
 Here is an illustration of what we are doing: 
 
-![vivaldi_z3kENJuYuV](https://i.imgur.com/dC1yrGE.png)
+![vivaldi_z3kENJuYuV](https://i.imgur.com/iJfYltq.png)
 
 
 ![vivaldi_QbUpS9XsXc](https://user-images.githubusercontent.com/109401839/212757249-70c7c150-9627-408f-a285-53b0f9d34a09.png)
