@@ -81,7 +81,7 @@ Yay!!! Look at the traffic.
 
 - Server Manager > "Add Roles and Features" > Check "Active Directory Domain Services"
 
-![vivaldi_od5BgUKG6G](https://user-images.githubusercontent.com/109401839/213214935-0fe230d0-60be-431a-bf31-53cfc50748b9.png)
+![vivaldi_od5BgUKG6G](https://i.imgur.com/fwJPzlR.png)
 
 2. Promote as a DC: Setup a new forest as mydomain.com (can be anything, just remember what it is)
 
