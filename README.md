@@ -8,7 +8,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>What is Active Directory?</h2>
 
-Software built and maintained by Microsoft. Centrally manage thousands of user accounts in a single place such as accounts, passwords, permissions etc. It allows you to manage devices and provides a way to control access to resources on a large scale.
+Software built and maintained by Microsoft. Centrally manages thousands of user accounts in a single place such as accounts, passwords, permissions etc. It allows you to manage devices and provides a way to control access to resources on a large scale.
 
 <h2>Environments and Technologies Used</h2>
 
@@ -51,17 +51,20 @@ Here is an illustration of what we are doing:
 
 1. Login to Client-1 with Remote Desktop and ping DC-1’s private IP address with ping -t <IP Address> (perpetual ping)
 
-![vivaldi_3DGaaVQRmB](https://i.imgur.com/UpCX63H.png)
+
+![vivaldi_QbUpS9XsXc](https://i.imgur.com/UpCX63H.png)
+   
 
 Notice that we are getting a "Request timed out." Let's go ahead and fix that.
+   
 
 2. Login to the Domain Controller and enable ICMPv4 in on the local windows Firewall, keep client-1 VM open. 
 
-- Start Menu > Windows Defender Firewall with Advanced Secruity programme > Inbound Rules > Sort by Porotocol > 
+- Start Menu > Windows Defender Firewall with Advanced Secruity program > Inbound Rules > Sort by Porotocol > 
 
 - Enable "Core Networking Diagnostics - ICMP Echo Request (ICMPv4-In) Private and Domain Profiles. 2 Inbound Rules.
 
-![Inkedvivaldi_Gb9rFL8rhC](https://user-images.githubusercontent.com/109401839/213214025-94b0bfb0-f017-4e8b-8676-d01ffeb9ab93.jpg)
+![Inkedvivaldi_Gb9rFL8rhC](https://i.imgur.com/heh2QTY.png)
 
 
 3. Check back at Client-1 to see the ping succeed
@@ -69,9 +72,9 @@ Notice that we are getting a "Request timed out." Let's go ahead and fix that.
 ![vivaldi_WbtokOOBck](https://i.imgur.com/mjYsRxL.png)
 
 Yay!!! Look at the traffic. 
+   
 
 <h2>Install Active Directory<h2>
-
 
 
 1. Login to DC-1 and install Active Directory Domain Services
