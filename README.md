@@ -8,7 +8,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>What is Active Directory?</h2>
 
-Sofeware built and maintained by Microsoft. Centrally manage thousands of user accounts in a single place such as accounts, passwords, permissions etc. It allows you to manage devices and provides a way to control access to resources on a large scale.
+Software built and maintained by Microsoft. Centrally manage thousands of user accounts in a single place such as accounts, passwords, permissions etc. It allows you to manage devices and provides a way to control access to resources on a large scale.
 
 <h2>Environments and Technologies Used</h2>
 
