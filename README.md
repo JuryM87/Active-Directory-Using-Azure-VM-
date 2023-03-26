@@ -41,7 +41,10 @@ DC-1 > Networking > NIC > IP Configurations
 
 ![vivaldi_zDAEQAVoDh](https://i.imgur.com/CXrdedL.png)
 
+
 3. Create the Client VM (Windows 10) named “Client-1”. Use the same Resource Group and Vnet that was created in the DC-1 step.
+
+
 4. Ensure that both VMs are in the same Vnet [you can check the topology with Network Watcher]
 
 ![vivaldi_z3kENJuYuV](https://i.imgur.com/iJfYltq.png)
@@ -50,7 +53,7 @@ DC-1 > Networking > NIC > IP Configurations
 ![vivaldi_QbUpS9XsXc](https://user-images.githubusercontent.com/109401839/212757249-70c7c150-9627-408f-a285-53b0f9d34a09.png)
 
 <h2>Ensure Connection between Client and Domain Controller<h2>
-
+    
 1. Login to Client-1 with Remote Desktop and ping DC-1’s private IP address with ping -t <IP Address> (perpetual ping)
 
 
@@ -59,7 +62,6 @@ DC-1 > Networking > NIC > IP Configurations
 
 Notice that we are getting a "Request timed out." Let's go ahead and fix that.
    
-
 2. Login to the Domain Controller and enable ICMPv4 in on the local windows Firewall, keep client-1 VM open. 
 
 - Start Menu > Windows Defender Firewall with Advanced Secruity program > Inbound Rules > Sort by Porotocol > 
@@ -81,7 +83,6 @@ Yay!!! Look at the traffic.
 
 1. Login to DC-1 and install Active Directory Domain Services
    
-
 - Server Manager > "Add Roles and Features" > Check "Active Directory Domain Services"
  
 
