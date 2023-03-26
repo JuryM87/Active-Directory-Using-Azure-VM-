@@ -51,7 +51,7 @@ Here is an illustration of what we are doing:
 
 1. Login to Client-1 with Remote Desktop and ping DC-1’s private IP address with ping -t <IP Address> (perpetual ping)
 
-![vivaldi_3DGaaVQRmB](https://i.imgur.com/P9soHIK.png)
+![vivaldi_3DGaaVQRmB](https://i.imgur.com/UpCX63H.png)
 
 Notice that we are getting a "Request timed out." Let's go ahead and fix that.
 
@@ -66,9 +66,9 @@ Notice that we are getting a "Request timed out." Let's go ahead and fix that.
 
 3. Check back at Client-1 to see the ping succeed
 
-![vivaldi_WbtokOOBck](https://user-images.githubusercontent.com/109401839/213214146-018e77d5-98a4-4256-91fd-16647ff58006.png)
+![vivaldi_WbtokOOBck](https://i.imgur.com/mjYsRxL.png)
 
-Look at that beautiful traffic. Now its time to ... 
+Yay!!! Look at the traffic. 
 
 <h2>Install Active Directory<h2>
 
