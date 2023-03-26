@@ -101,7 +101,108 @@ Yay!!! Look at the traffic.
    
    ![vivaldi_od5BgUKG6G](https://i.imgur.com/RhF5cJm.png)
    
-   Create an new OU named "_ADMINS"
+ 5. Create an new OU named "_ADMINS"
    
    ![vivaldi_od5BgUKG6G!](https://i.imgur.com/p3wByA9.png)
 
+6. Create a new employee names "Jane Doe" with the username JaneDoe
+   -Add Jane Doe to the "Domain Admins" Security Group
+   *Right Click Jane Doe and go to Properites and Follow the illustration below
+  
+ ![vivaldi_od5BgUKG6G](https://i.imgur.com/a5vADqt.png)
+   
+ 
+ ![vivaldi_od5BgUKG6G](https://i.imgur.com/bWyNq08.png)
+   
+ 
+ ![vivaldi_od5BgUKG6G](https://i.imgur.com/Sqg2Ewu.png)
+   
+8. Log out/close the Remote Desktop connection to DC-1 and log back in as “jury.com\janedoe"
+   
+9. User Jane Doe as your admin account from now on
+
+<h2>Join Client-1 to your domain (jury.com)<h2>
+
+![vivaldi_cRAVrKouac](https://user-images.githubusercontent.com/109401839/213221204-72c7058c-3730-47d9-b9fb-4435ee87c3fd.png)
+
+1. From the Azure Portal, set Client-1’s DNS settings to the DC’s Private IP address
+2. From the Azure Portal, restart Client-1
+3. Login to Client-1 (Remote Desktop) as the original local admin (labuser) and join it to the domain (computer will restart)
+4. Login to the Domain Controller (Remote Desktop) and verify Client-1 shows up in Active Directory Users and Computers (ADUC) inside the “Computers” container on the root of the domain
+5. Create a new OU named “_CLIENTS” and drag Client-1 into there
+
+<H2>Setup Remote Desktop for non-administrative users on Client-1<H2>
+
+1. Log into Client-1 as mydomain.com\jane_admin and open system properties
+
+![vivaldi_pBr66s3R4C](https://user-images.githubusercontent.com/109401839/213220623-04e09574-52ad-407a-945b-f53f52417b50.png)
+
+2. Click “Remote Desktop”
+3. Allow “domain users” access to remote desktop
+
+![Inkedvivaldi_uNcBpy336J](https://user-images.githubusercontent.com/109401839/213223500-193b62e3-062f-4f69-8da4-5ef96692ec31.jpg)
+
+
+4. You can now log into Client-1 as a normal, non-administrative user now
+5. Normally you’d want to do this with Group Policy that allows you to change MANY systems at once
+
+<H2>Create a bunch of additional users and attempt to log into client-1 with one of the users<H2>
+
+1. Login to DC-1 as jane_admin
+2. Open PowerShell_ise as an administrator
+3. Create a new File and paste the contents of the [script] below:
+
+
+> '''Function generate-random-name() {
+>    $consonants = @('b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','z')
+>    $vowels = @('a','e','i','o','u','y')
+>    $nameLength = Get-Random -Minimum 3 -Maximum 7
+>    $count = 0
+>    $name = ""
+>
+>    while ($count -lt $nameLength) {
+>        if ($($count % 2) -eq 0) {
+>            $name += $consonants[$(Get-Random -Minimum 0 -Maximum $($consonants.Count - 1))]
+>        }
+>        else {
+>            $name += $vowels[$(Get-Random -Minimum 0 -Maximum $($vowels.Count - 1))]
+>        }
+>        $count++
+>    }
+>
+>    return $name
+>
+> }
+>
+> $count = 1
+> while ($count -lt $NUMBER_OF_ACCOUNTS_TO_CREATE) {
+>    $fisrtName = generate-random-name
+>    $lastName = generate-random-name
+>    $username = $fisrtName + '.' + $lastName
+>    $password = ConvertTo-SecureString $PASSWORD_FOR_USERS -AsPlainText -Force
+>
+>    Write-Host "Creating user: $($username)" -BackgroundColor Black -ForegroundColor Cyan
+>    
+>    New-AdUser -AccountPassword $password `
+>               -GivenName $firstName `
+>               -Surname $lastName `
+>               -DisplayName $username `
+>               -Name $username `
+>               -EmployeeID $username `
+>               -PasswordNeverExpires $true `
+>               -Path "ou=_EMPLOYEES,$(([ADSI]`"").distinguishedName)" `
+>               -Enabled $true
+>    $count++
+> }''' 
+
+[Code Source](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1)
+
+4. Run the script and observe the accounts being created
+
+![vivaldi_Lr0ydPgSZ7](https://user-images.githubusercontent.com/109401839/213226346-7dc7f494-6299-4fab-a210-d07a16b71b97.png)
+
+
+5. When finished, open ADUC and observe the accounts in the appropriate OU
+6. Attempt to log into Client-1 with one of the accounts (take note of the password in the script)
+
+![vivaldi_hbfgkZ3l45](https://user-images.githubusercontent.com/109401839/213226577-6f5bd613-ba81-4a62-bc7c-98896e41c94a.png)
