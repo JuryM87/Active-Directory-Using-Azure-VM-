@@ -122,15 +122,23 @@ Yay!!! Look at the traffic.
  ![vivaldi_od5BgUKG6G](https://i.imgur.com/2cHBH8Y.png)
    
 9. User Jane Doe as your admin account from now on
+   
+![vivaldi_od5BgUKG6G](https://i.imgur.com/Rd1xQfL.png)
 
 <h2>Join Client-1 to your domain (jury.com)<h2>
 
 ![vivaldi_cRAVrKouac](https://user-images.githubusercontent.com/109401839/213221204-72c7058c-3730-47d9-b9fb-4435ee87c3fd.png)
 
 1. From the Azure Portal, set Client-1’s DNS settings to the DC’s Private IP address
+   
+![vivaldi_cRAVrKouac](https://i.imgur.com/BhMzhRH.png)
+   
 2. From the Azure Portal, restart Client-1
+   
 3. Login to Client-1 (Remote Desktop) as the original local admin (labuser) and join it to the domain (computer will restart)
+   
 4. Login to the Domain Controller (Remote Desktop) and verify Client-1 shows up in Active Directory Users and Computers (ADUC) inside the “Computers” container on the root of the domain
+   
 5. Create a new OU named “_CLIENTS” and drag Client-1 into there
 
 <H2>Setup Remote Desktop for non-administrative users on Client-1<H2>
