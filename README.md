@@ -119,6 +119,8 @@ Yay!!! Look at the traffic.
    
 8. Log out/close the Remote Desktop connection to DC-1 and log back in as “jury.com\janedoe"
    
+ ![vivaldi_od5BgUKG6G](https://i.imgur.com/2cHBH8Y.png)
+   
 9. User Jane Doe as your admin account from now on
 
 <h2>Join Client-1 to your domain (jury.com)<h2>
