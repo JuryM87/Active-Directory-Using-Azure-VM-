@@ -49,13 +49,13 @@ Here is an illustration of what we are doing:
 
 <h2>Ensure Connection between Client and Domain Controller<h2>
 
-1. Login to Client-1 with Remote Desktop and ping DC-1’s private IP address with ping -t <ip address> (perpetual ping)
+1. Login to Client-1 with Remote Desktop and ping DC-1’s private IP address with ping -t <IP Address> (perpetual ping)
 
-![vivaldi_3DGaaVQRmB](https://user-images.githubusercontent.com/109401839/213212386-519dc0bd-6913-49f1-b3e3-8bbb260741a5.png)
+![vivaldi_3DGaaVQRmB](https://i.imgur.com/P9soHIK.png)
 
-Oh! Notice we are getting a "Request timed out." Let us fix that. 
+Notice that we are getting a "Request timed out." Let's go ahead and fix that.
 
-2. Login to the Domain Controller and enable ICMPv4 in on the local windows Firewall, keep client-1 instance open. 
+2. Login to the Domain Controller and enable ICMPv4 in on the local windows Firewall, keep client-1 VM open. 
 
 - Start Menu > Windows Defender Firewall with Advanced Secruity programme > Inbound Rules > Sort by Porotocol > 
 
