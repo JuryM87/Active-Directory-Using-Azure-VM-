@@ -167,9 +167,12 @@ Yay!!! Look at the traffic.
 2. Open PowerShell_ise as an administrator
 3. Create a new File and paste the contents of the [script] below:
 
-# ----- Edit these Variables for your own Use Case ----- #
+
+[Code Source](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1)
+   
+![vivaldi_Lr0ydPgSZ7](https://imgur.com/a/G1FMMXy # ----- Edit these Variables for your own Use Case ----- #
 $PASSWORD_FOR_USERS   = "Password1"
-$NUMBER_OF_ACCOUNTS_TO_CREATE = 1000
+$NUMBER_OF_ACCOUNTS_TO_CREATE = 10000
 # ------------------------------------------------------ #
 
 Function generate-random-name() {
@@ -209,24 +212,11 @@ while ($count -lt $NUMBER_OF_ACCOUNTS_TO_CREATE) {
                -Name $username `
                -EmployeeID $username `
                -PasswordNeverExpires $true `
-               -Path "ou=_EMPLOYEES,$(([ADSI]`"").distinguishedName)" `
-               -Enabled $true
-    $count++
-}
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-
-
-[Code Source](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1)
+               -Path "ou=_EMPLOYEES,$(([ADSI]`"").distinguishe)
 
 4. Run the script and observe the accounts being created
 
-![vivaldi_Lr0ydPgSZ7](https://user-images.githubusercontent.com/109401839/213226346-7dc7f494-6299-4fab-a210-d07a16b71b97.png)
+![vivaldi_Lr0ydPgSZ7](https://imgur.com/a/G1FMMXy)
 
 
 5. When finished, open ADUC and observe the accounts in the appropriate OU
