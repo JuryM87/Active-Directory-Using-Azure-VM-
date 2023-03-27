@@ -143,16 +143,14 @@ Yay!!! Look at the traffic.
    
 4. Login to the Domain Controller (Remote Desktop) and verify Client-1 shows up in Active Directory Users and Computers (ADUC) inside the “Computers” container on the root of the domain
    
-5. Create a new OU named “_CLIENTS” and drag Client-1 into there
-
 <H2>Setup Remote Desktop for non-administrative users on Client-1<H2>
 
 1. Log into Client-1 as jury.com\janedoe and open system properties
 
-![vivaldi_pBr66s3R4C](https://user-images.githubusercontent.com/109401839/213220623-04e09574-52ad-407a-945b-f53f52417b50.png)
-    
+![vivaldi_pBr66s3R4C](https://user-images.githubusercontent.com/109401839/213220623-04e09574-52ad-407a-945b-f53f52417b50.png)    
 
 2. Click “Remote Desktop”
+   
 3. Allow “domain users” access to remote desktop
 
 ![Inkedvivaldi_uNcBpy336J](https://user-images.githubusercontent.com/109401839/213223500-193b62e3-062f-4f69-8da4-5ef96692ec31.jpg)
@@ -171,8 +169,10 @@ Yay!!! Look at the traffic.
 
 5. When finished, open ADUC and observe the accounts in the appropriate OU
   
-![vivaldi_hbfgkZ3l45](https://i.imgur.com/eDCk440.png)
+![vivaldi_hbfgkZ3l45](https://i.imgur.com/IUZU2K0.png)
    
 6. Attempt to log into Client-1 with one of the accounts (take note of the password in the script)
+   
+![vivaldi_hbfgkZ3l45](https://i.imgur.com/Zxmz3PX.png)  
 
-![vivaldi_hbfgkZ3l45](https://user-images.githubusercontent.com/109401839/213226577-6f5bd613-ba81-4a62-bc7c-98896e41c94a.png)
+![vivaldi_hbfgkZ3l45](https://i.imgur.com/LRZY1A4.png)
