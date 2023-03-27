@@ -180,5 +180,7 @@ Yay!!! Look at the traffic.
 
 ![vivaldi_hbfgkZ3l45](https://i.imgur.com/LRZY1A4.png)
 
+Your done. You can do with this many diffent account, already registered but you get the point with this example.
    
+I hope you enjoyed this tutorial and I hope to see you in the next one.   
 Thank for sticking around until the end. I greatly appreciate it. 
