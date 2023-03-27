@@ -147,7 +147,7 @@ Yay!!! Look at the traffic.
 
 <H2>Setup Remote Desktop for non-administrative users on Client-1<H2>
 
-1. Log into Client-1 as mydomain.com\jane_admin and open system properties
+1. Log into Client-1 as jury.com\janedoe and open system properties
 
 ![vivaldi_pBr66s3R4C](https://user-images.githubusercontent.com/109401839/213220623-04e09574-52ad-407a-945b-f53f52417b50.png)
     
@@ -163,14 +163,16 @@ Yay!!! Look at the traffic.
 
 <H2>Create a bunch of additional users and attempt to log into client-1 with one of the users<H2>
 
-1. Login to DC-1 as jane_admin
+1. Login to DC-1 as janedoe
 2. Open PowerShell_ise as an administrator
 3. Create a new File and paste the contents of the [script] below:
 
 [Code Source](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1)
 
-
 5. When finished, open ADUC and observe the accounts in the appropriate OU
+  
+![vivaldi_hbfgkZ3l45](https://i.imgur.com/eDCk440.png)
+   
 6. Attempt to log into Client-1 with one of the accounts (take note of the password in the script)
 
 ![vivaldi_hbfgkZ3l45](https://user-images.githubusercontent.com/109401839/213226577-6f5bd613-ba81-4a62-bc7c-98896e41c94a.png)
