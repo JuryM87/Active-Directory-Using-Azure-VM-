@@ -163,6 +163,9 @@ Yay!!! Look at the traffic.
 
 1. Login to DC-1 as janedoe
 2. Open PowerShell_ise as an administrator
+   
+![vivaldi_hbfgkZ3l45](https://i.imgur.com/r1ICGmS.png)
+   
 3. Create a new File and paste the contents of the [script] below:
 
 [Code Source](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1)
