@@ -136,10 +136,7 @@ Yay!!! Look at the traffic.
 2. From the Azure Portal, restart Client-1
    
 3. Login to Client-1 (Remote Desktop) as the original local admin (labuser) and join it to the domain (computer will restart)
-   
-   ![vivaldi_pBr66s3R4C](https://i.imgur.com/OCHs9tc.png)  
-   
-   ![vivaldi_pBr66s3R4C](https://i.imgur.com/FYNpivC.png)
+ 
    
 4. Login to the Domain Controller (Remote Desktop) and verify Client-1 shows up in Active Directory Users and Computers (ADUC) inside the “Computers” container on the root of the domain
    
@@ -147,16 +144,19 @@ Yay!!! Look at the traffic.
 
 1. Log into Client-1 as jury.com\janedoe and open system properties
 
-![vivaldi_pBr66s3R4C](https://user-images.githubusercontent.com/109401839/213220623-04e09574-52ad-407a-945b-f53f52417b50.png)    
-
+ ![vivaldi_pBr66s3R4C](https://i.imgur.com/OCHs9tc.png)  
+   
+   ![vivaldi_pBr66s3R4C](https://i.imgur.com/FYNpivC.png)
+   
 2. Click “Remote Desktop”
+   
    
 3. Allow “domain users” access to remote desktop
 
-![Inkedvivaldi_uNcBpy336J](https://user-images.githubusercontent.com/109401839/213223500-193b62e3-062f-4f69-8da4-5ef96692ec31.jpg)
-
 
 4. You can now log into Client-1 as a normal, non-administrative user now
+   
+   
 5. Normally you’d want to do this with Group Policy that allows you to change MANY systems at once
 
 <H2>Create a bunch of additional users and attempt to log into client-1 with one of the users<H2>
